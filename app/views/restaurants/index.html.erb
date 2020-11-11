@@ -1,0 +1,18 @@
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata&display=swap" rel="stylesheet">
+<div class="banner">
+<h1> Here a list of our amazing restaurants </h1>
+</div>
+<div class="forming">
+<% @restaurants.each do |restaurant| %>
+<h2><%=link_to restaurant.name, restaurant_path(restaurant)%></h2>
+<p> <%= restaurant.address %> </p>
+<%= link_to ' [ Delete ]', restaurants_path(restaurant),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
+
+
+<% end %>
+</div>
+<br>
+<button type="button" class="btn-first"><%=link_to 'Add Restaurant', new_restaurant_path%></button>

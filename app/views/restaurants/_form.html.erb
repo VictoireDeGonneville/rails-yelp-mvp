@@ -1,0 +1,26 @@
+<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <%= form_for(@restaurant) do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "form-control"%>
+
+          <%= f.label :address %>
+          <%= f.text_field :address, class: "form-control" %>
+
+
+        <%= f.label :phone_number %>
+          <%= f.text_field :phone_number, class: "form-control"%>
+
+         <%= f.label :category %>
+          <%= f.text_field :category, class: "form-control"%>
+          </div>
+
+
+        <%= f.submit 'create a new restaurant', :class => 'submit-button' %>
+      <% end %>
+    </div>
+  </div>
+</div>
